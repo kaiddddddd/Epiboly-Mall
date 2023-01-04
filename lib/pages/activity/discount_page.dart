@@ -46,12 +46,7 @@ class _DiscountPageState extends State<DiscountPage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              TitleBar(
-                title: "",
-                themeColor: Colors.black,
-                padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top + 20),
-                leftMargin: EdgeInsets.only(left: 10),
-              ),
+              MyTitle(bgColor: Colors.transparent),
               SizedBox(height: 200),
               _buildCouponList(),
               Padding(

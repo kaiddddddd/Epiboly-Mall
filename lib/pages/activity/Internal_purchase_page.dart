@@ -86,10 +86,10 @@ class _InternalPurchasePageState extends State<InternalPurchasePage> {
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: Column(
                   children: [
-                    TitleBar(
+                    MyTitle(
+                      bgColor: Colors.transparent,
                       title: "内购专区",
-                      themeColor: Colors.black,
-                      padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top + 20),
+                      theme: TitleTheme.white,
                     ),
                     _buildDescription(),
                     _buildGoodTitle(),
@@ -141,8 +141,7 @@ class _InternalPurchasePageState extends State<InternalPurchasePage> {
           ),
           Expanded(
             child: Align(
-                alignment: Alignment.center,
-                child: Text("比价商品", style: TextStyle(fontSize: 12, color: Colors.white))),
+                alignment: Alignment.center, child: Text("比价商品", style: TextStyle(fontSize: 12, color: Colors.white))),
           ),
           Expanded(
             child: Align(

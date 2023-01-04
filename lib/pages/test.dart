@@ -1,8 +1,7 @@
 import 'package:MallApp/base/base_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../components/title_bar.dart';
+import 'package:MallApp/components/title_bar.dart';
 
 class TestPage extends BasePage {
   @override

@@ -70,11 +70,7 @@ class _BaoYouPageState extends State<BaoYouPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                TitleBar(
-                  title: "",
-                  themeColor: Colors.black,
-                  padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top + 20),
-                ),
+                MyTitle(bgColor: Colors.transparent),
                 _buildGoodsList(),
               ],
             ),

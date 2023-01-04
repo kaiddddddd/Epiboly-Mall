@@ -23,10 +23,16 @@ abstract class BaseState<T extends BasePage> extends State<BasePage> {
   Widget? rootView(BuildContext context) => null;
 
   //覆写此方法构建页面,rootView()方法互斥
-  Widget pageBody(BuildContext context);
+  Widget? pageBody(BuildContext context) => null;
 
   //覆写此方法构建AppBar
+  @protected
+  @factory
   MyTitle? pageTitle() => null;
+
+  @protected
+  @factory
+  Widget? backgroundGradual() => null;
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +53,7 @@ abstract class BaseState<T extends BasePage> extends State<BasePage> {
       child: Column(
         children: [
           pageTitle() ?? Container(),
-          pageBody(context),
+          pageBody(context) ?? Container(),
         ],
       ),
     );

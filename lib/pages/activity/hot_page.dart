@@ -101,10 +101,7 @@ class _HotPageState extends State<HotPage> {
               padding: EdgeInsets.symmetric(horizontal: 16),
               child: Column(
                 children: [
-                  TitleBar(
-                    title: "",
-                    padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top + 20),
-                  ),
+                  MyTitle(bgColor: Colors.transparent),
                   SizedBox(height: 200),
                   _commodityList1(),
                   SizedBox(height: 20),

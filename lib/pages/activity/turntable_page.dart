@@ -22,10 +22,10 @@ class TurntablePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            TitleBar(
-              title: "内购专区",
-              padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top + 20),
-              leftMargin: EdgeInsets.only(left: 10),
+            MyTitle(
+              title: '内购专区',
+              bgColor: Colors.transparent,
+              theme: TitleTheme.white,
             ),
             _buildDescription()
           ],

@@ -1,9 +1,9 @@
 import 'package:MallApp/pages/main/components/goods_list.dart';
 import 'package:MallApp/styles/colors.dart';
-import 'package:date_format/date_format.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/background_container.dart';
+import '../../components/my_search.dart';
 import '../../utils/my_navigator.dart';
 import 'good_detail_page.dart';
 
@@ -26,7 +26,7 @@ class _GoodsPageState extends State<GoodsPage> {
       bgHeight: 200,
       children: [
         _buildTitle(),
-        _buildSearch(),
+        MySearch(),
         _buildGoodsContent(),
       ],
     );
@@ -51,33 +51,8 @@ class _GoodsPageState extends State<GoodsPage> {
             ),
           ),
           Image.asset(
-             "assets/images/goods/title${widget.type.index + 1}.png",
+            "assets/images/goods/title${widget.type.index + 1}.png",
             width: 86,
-          ),
-        ],
-      ),
-    );
-  }
-
-  _buildSearch() {
-    return Container(
-      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 18),
-      child: Row(
-        children: [
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              alignment: Alignment.centerLeft,
-              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 18),
-              child: Image.asset("assets/images/home/search.png", width: 19),
-            ),
-          ),
-          SizedBox(width: 12),
-          Text(
-            "搜索",
           ),
         ],
       ),
@@ -88,19 +63,23 @@ class _GoodsPageState extends State<GoodsPage> {
     Widget listWidget;
     Color bgColor;
     String sortValue;
-    switch(widget.type){
+    switch (widget.type) {
       case GoodsType.ZHI_DE:
         listWidget = _buildGoodsList();
         bgColor = Colors.white;
         sortValue = "值得购";
         break;
       case GoodsType.ER_XIAO:
-        listWidget = GoodsList(hasShopValue: true,);
+        listWidget = GoodsList(
+          hasShopValue: true,
+        );
         bgColor = Color(0xFFF5F5F5);
         sortValue = "热销值";
         break;
       case GoodsType.JING_XUAN:
-        listWidget = GoodsList(hasShopValue: true,);
+        listWidget = GoodsList(
+          hasShopValue: true,
+        );
         bgColor = Color(0xFFF5F5F5);
         sortValue = "品质值";
         break;
