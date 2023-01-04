@@ -1,4 +1,8 @@
+import 'package:MallApp/pages/book/fenlei_page.dart';
+import 'package:MallApp/pages/book/shucheng_page.dart';
+import 'package:MallApp/pages/book/shujia_page.dart';
 import 'package:MallApp/pages/book/store/book_provider.dart';
+import 'package:MallApp/pages/book/wode_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,7 +19,6 @@ class BookMainPage extends StatefulWidget {
 }
 
 class _BookMainPageState extends State<BookMainPage> {
-
   @override
   Widget build(BuildContext context) {
     final mainState = Provider.of<BookProvider>(context, listen: false);
@@ -35,10 +38,10 @@ class _BookMainPageState extends State<BookMainPage> {
           body: PageView(
             controller: mainState.tabBarPageController,
             children: <Widget>[
-              KeepAliveWrapper(child: Container()),
-              KeepAliveWrapper(child: Container()),
-              KeepAliveWrapper(child: Container()),
-              KeepAliveWrapper(child: Container()),
+              KeepAliveWrapper(child: ShuJiaPage()),
+              KeepAliveWrapper(child: ShuChengPage()),
+              KeepAliveWrapper(child: FenLeiPage()),
+              KeepAliveWrapper(child: WoDePage()),
             ],
             physics: NeverScrollableScrollPhysics(),
           ),
