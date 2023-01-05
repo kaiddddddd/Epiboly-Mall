@@ -40,6 +40,7 @@ dependencies:
   json_serializable: ^6.2.0  #json解析
   url_launcher_android: 6.0.20
   syncfusion_flutter_charts: ^19.4.56  #图表
+  underline_indicator: ^0.0.4
 
   #----
   flutter_screenutil: ^5.0.0+2
