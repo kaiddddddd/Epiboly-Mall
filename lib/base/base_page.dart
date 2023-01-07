@@ -55,7 +55,7 @@ abstract class BaseState<T extends BasePage> extends State<T> {
       child: Column(
         children: [
           pageTitle() ?? Container(),
-          pageBody(context) ?? Container(),
+          Expanded(child: pageBody(context) ?? Container()),
         ],
       ),
     );

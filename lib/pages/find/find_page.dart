@@ -8,6 +8,7 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 import '../../components/icon.dart';
 import '../../styles/colors.dart';
 import '../../utils/date_util.dart';
+import 'news_page.dart';
 
 class FindPage extends StatelessWidget {
   const FindPage({Key? key}) : super(key: key);
@@ -82,7 +83,7 @@ class FindPage extends StatelessWidget {
           children: [
             Row(
               children: [
-                _buildBottomMenuItem(1, "资讯", "去阅读", () => {}),
+                _buildBottomMenuItem(1, "资讯", "去阅读", () => {MyNavigator.push(NewsPage())}),
                 SizedBox(width: 20),
                 _buildBottomMenuItem(2, "小剧场", "去观看", () => {MyNavigator.push(TheaterPage())}),
               ],
