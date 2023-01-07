@@ -78,12 +78,15 @@ class _PayMethodDialogState extends State<PayMethodDialog> {
               label: '订单备注',
               rightIcon: Icon(Icons.arrow_forward_ios_outlined, color: Colors.black, size: 16),
             ),
-            PayMethodSelector(
-              decoration: BoxDecoration(
-                color: AppColors.primaryBackground,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
+            Padding(
+              padding: EdgeInsets.all(18),
+              child: PayMethodSelector(
+                decoration: BoxDecoration(
+                  color: AppColors.primaryBackground,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                  ),
                 ),
               ),
             ),

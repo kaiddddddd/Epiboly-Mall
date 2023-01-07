@@ -37,14 +37,13 @@ class MyTitle extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              padding: EdgeInsets.only(left: 16),
+              padding: EdgeInsets.only(left: 16,right: 12),
               child: Image.asset(
                 theme == TitleTheme.white ? 'assets/images/common/back_white.png' : 'assets/images/common/back.png',
                 width: 10,
                 height: 18,
               ),
             ),
-            SizedBox(width: 12),
             Text(title,
                 style: TextStyle(
                   fontSize: 17,

@@ -19,6 +19,16 @@ class BookMainPage extends StatefulWidget {
 }
 
 class _BookMainPageState extends State<BookMainPage> {
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+      final mainState = Provider.of<BookProvider>(context, listen: false);
+      mainState.setTabBarSelectedIndex = 0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final mainState = Provider.of<BookProvider>(context, listen: false);

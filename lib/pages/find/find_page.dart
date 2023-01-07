@@ -1,4 +1,5 @@
 import 'package:MallApp/pages/book/book_main.dart';
+import 'package:MallApp/pages/find/theater_page.dart';
 import 'package:MallApp/utils/my_navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -83,15 +84,13 @@ class FindPage extends StatelessWidget {
               children: [
                 _buildBottomMenuItem(1, "资讯", "去阅读", () => {}),
                 SizedBox(width: 20),
-                _buildBottomMenuItem(2, "小剧场", "去观看", () => {}),
+                _buildBottomMenuItem(2, "小剧场", "去观看", () => {MyNavigator.push(TheaterPage())}),
               ],
             ),
             SizedBox(height: 20),
             Row(
               children: [
-                _buildBottomMenuItem(3, "小说", "去阅读", () => {
-                  MyNavigator.push(BookMainPage())
-                }),
+                _buildBottomMenuItem(3, "小说", "去阅读", () => {MyNavigator.push(BookMainPage())}),
                 SizedBox(width: 20),
                 _buildBottomMenuItem(4, "营销中心", "去查看", () => {}),
               ],
@@ -158,7 +157,7 @@ class FindPage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 20,right: 16,bottom: 20),
+              padding: EdgeInsets.only(top: 20, right: 16, bottom: 20),
               child: Row(
                 children: [
                   Container(
@@ -169,7 +168,7 @@ class FindPage extends StatelessWidget {
                         _buildDoughnutChart(),
                         //阅读值
                         Container(
-                          padding: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
+                          padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),
                             color: Colors.white,

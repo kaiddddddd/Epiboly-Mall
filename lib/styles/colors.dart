@@ -35,4 +35,13 @@ class AppColors {
 
   static const Color red = Color(0xFFFD4841);
 
+  static const Color black = Color(0xFF000000);
+
+  static const Color white = Color(0xFFFFFFFF);
+
+  // 书籍充值
+  static const Color orange = Color(0xFFF57700);
+
+  static const Color recharge_bg = Color(0xfffae0c5);
+
 }

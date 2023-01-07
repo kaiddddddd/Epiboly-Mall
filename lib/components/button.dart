@@ -9,14 +9,17 @@ class BottomButton extends StatelessWidget {
   final ButtonType type;
   final double? height;
   final EdgeInsetsGeometry? padding;
-  const BottomButton({
-    Key? key,
-    required this.handleOk,
-    required this.text,
-    this.type = ButtonType.DEFAULT,
-    this.height,
-    this.padding
-  }) : super(key: key);
+  final Color? bgColor;
+
+  const BottomButton(
+      {Key? key,
+      required this.handleOk,
+      required this.text,
+      this.type = ButtonType.DEFAULT,
+      this.height,
+      this.padding,
+      this.bgColor})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +34,7 @@ class BottomButton extends StatelessWidget {
         padding: padding,
         //outline
         decoration: BoxDecoration(
-          color: type == ButtonType.DEFAULT ? AppColors.primaryColor : null,
+          color: type == ButtonType.DEFAULT ? bgColor ?? AppColors.primaryColor : null,
           border: type == ButtonType.OUTLINED ? Border.all(color: AppColors.primaryColor) : null,
           borderRadius: BorderRadius.circular(40.0),
         ),

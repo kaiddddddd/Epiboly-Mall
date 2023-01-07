@@ -5,9 +5,11 @@ import 'package:flutter/material.dart';
 
 class MySearch extends StatelessWidget {
 
-  MySearch({this.bgColor, this.hint = ""});
+  MySearch({this.bgColor, this.hint = "",this.textColor});
 
   final Color? bgColor;
+
+  final Color? textColor;
 
   final String hint;
 
@@ -41,6 +43,10 @@ class MySearch extends StatelessWidget {
         SizedBox(width: 12),
         Text(
           "搜索",
+          style: TextStyle(
+            color: textColor ?? Colors.black,
+            fontSize: 14,
+          ),
         ),
       ],
     );

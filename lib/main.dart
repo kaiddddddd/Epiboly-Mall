@@ -57,6 +57,9 @@ class MyApp extends StatelessWidget {
             primaryColor: AppColors.primaryColor,
             accentColor: AppColors.primaryColorAccent,
           ),
+          navigatorObservers: [ FlutterSmartDialog.observer],
+
+          builder: FlutterSmartDialog.init(),
           debugShowCheckedModeBanner: false,
           home: isLogin ? MainPage() : LoginPage(),
         ),

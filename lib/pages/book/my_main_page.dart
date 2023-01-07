@@ -4,6 +4,7 @@ import 'package:MallApp/components/title_bar.dart';
 import 'package:MallApp/pages/book/my_consume_page.dart';
 import 'package:MallApp/pages/book/my_read_page.dart';
 import 'package:MallApp/pages/book/my_recharge_page.dart';
+import 'package:MallApp/pages/book/recharge_center_page.dart';
 import 'package:MallApp/styles/colors.dart';
 import 'package:MallApp/utils/my_navigator.dart';
 import 'package:flutter/cupertino.dart';
@@ -90,7 +91,9 @@ class _MyMainPageState extends BaseState {
                   text: "去充值",
                   height: 31,
                   textColor: AppColors.blue,
-                  onPressed: () {},
+                  onPressed: () {
+                    MyNavigator.push(RechargeCenterPage());
+                  },
                 )
               ],
             ),

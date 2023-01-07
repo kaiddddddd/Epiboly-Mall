@@ -33,39 +33,30 @@ class _PayMethodSelectorState extends State<PayMethodSelector> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(18),
-      // 圆角22
-      decoration: widget.decoration ??
-          BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(22),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        widget.hasTitle
+            ? Text(
+                "请选择支付方式",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                ),
+              )
+            : Container(),
+        Container(
+          child: ListView.builder(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            padding: EdgeInsets.zero,
+            itemCount: _payMethodData.length,
+            itemBuilder: (context, index) {
+              return _buildPayMethodItem(_payMethodData[index], index);
+            },
           ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          widget.hasTitle
-              ? Text(
-                  "请选择支付方式",
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                  ),
-                )
-              : Container(),
-          Container(
-            child: ListView.builder(
-              shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
-              padding: EdgeInsets.zero,
-              itemCount: _payMethodData.length,
-              itemBuilder: (context, index) {
-                return _buildPayMethodItem(_payMethodData[index], index);
-              },
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 

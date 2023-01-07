@@ -15,7 +15,9 @@ class BookItem extends StatefulWidget {
 
   final bool reversal;
 
-  BookItem({required this.isDesc, this.showButton = false, this.type, this.reversal= false});
+  final double? bookWidth;
+
+  BookItem({required this.isDesc, this.showButton = false, this.type, this.reversal= false,this.bookWidth});
 
   @override
   State<BookItem> createState() => _BookItemState();
@@ -35,14 +37,17 @@ class _BookItemState extends State<BookItem> {
   }
 
   _buildNoDesc() {
+    var ratio = 1.34;
+    var width = widget.bookWidth ?? 100.0;
+    var height = width * ratio;
     return Column(
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(5),
           child: Image.network(
             'https://img3.doubanio.com/view/subject/l/public/s3369780.jpg',
-            width: 96,
-            height: 122,
+            width: width,
+            height: height,
             fit: BoxFit.cover,
           ),
         ),
