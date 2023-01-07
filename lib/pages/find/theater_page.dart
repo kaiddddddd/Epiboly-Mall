@@ -13,6 +13,7 @@ import '../../components/head_swiper.dart';
 import '../../components/my_search.dart';
 import '../../styles/colors.dart';
 import '../book/components/gradient_background.dart';
+import 'balance_page.dart';
 
 class TheaterPage extends BasePage {
   @override
@@ -81,7 +82,9 @@ class _TheaterPageState extends BaseState {
         _buildMenuItem('assets/images/find/theater2.png', "超值会员", () {
           showMemberDialog();
         }),
-        _buildMenuItem('assets/images/find/theater3.png', "币种余额", () => {}),
+        _buildMenuItem('assets/images/find/theater3.png', "币种余额", () => {
+          MyNavigator.push(BalancePagePage())
+        }),
       ],
     );
   }
