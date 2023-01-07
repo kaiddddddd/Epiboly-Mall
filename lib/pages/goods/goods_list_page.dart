@@ -26,7 +26,10 @@ class _GoodsPageState extends State<GoodsPage> {
       bgHeight: 200,
       children: [
         _buildTitle(),
-        MySearch(),
+        Container(
+          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 18),
+          child: MySearch(),
+        ),
         _buildGoodsContent(),
       ],
     );

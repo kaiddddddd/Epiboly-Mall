@@ -2,7 +2,6 @@ import 'package:MallApp/pages/book/fenlei_page.dart';
 import 'package:MallApp/pages/book/shucheng_page.dart';
 import 'package:MallApp/pages/book/shujia_page.dart';
 import 'package:MallApp/pages/book/store/book_provider.dart';
-import 'package:MallApp/pages/book/wode_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -10,6 +9,7 @@ import 'package:provider/provider.dart';
 
 import '../../components/keep_alive_wrapper.dart';
 import 'components/book_bottom_navigation_bar.dart';
+import 'my_main_page.dart';
 
 class BookMainPage extends StatefulWidget {
   const BookMainPage({Key? key}) : super(key: key);
@@ -41,7 +41,7 @@ class _BookMainPageState extends State<BookMainPage> {
               KeepAliveWrapper(child: ShuJiaPage()),
               KeepAliveWrapper(child: ShuChengPage()),
               KeepAliveWrapper(child: FenLeiPage()),
-              KeepAliveWrapper(child: WoDePage()),
+              KeepAliveWrapper(child: MyMainPage()),
             ],
             physics: NeverScrollableScrollPhysics(),
           ),

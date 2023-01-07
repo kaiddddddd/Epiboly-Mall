@@ -6,6 +6,7 @@ abstract class CardContainerBean {
   String label = "";
   double? labelWitch;
   Widget? content;
+  bool contentIsRight = false;
   bool? visible;
   String? errorText;
   Image? leftIcon;

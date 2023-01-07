@@ -14,7 +14,9 @@ abstract class BasePage extends StatefulWidget {
   BaseState createState();
 }
 
-abstract class BaseState<T extends BasePage> extends State<BasePage> {
+abstract class BaseState<T extends BasePage> extends State<T> {
+
+
   late BuildContext mContext;
 
   //覆写此方法则覆盖所有主题,pageBody()方法互斥

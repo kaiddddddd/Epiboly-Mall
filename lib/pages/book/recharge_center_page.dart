@@ -3,18 +3,18 @@ import 'package:MallApp/components/title_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class WoDePage extends BasePage {
+class RechargeCenterPage extends BasePage {
   @override
   BaseState<BasePage> createState() {
-    return _WoDePageState();
+    return _RechargeCenterPageState();
   }
 }
 
-class _WoDePageState extends BaseState {
+class _RechargeCenterPageState extends BaseState {
   @override
   MyTitle pageTitle() {
     return MyTitle(
-      title: '测试',
+      title: '充值中心',
     );
   }
 

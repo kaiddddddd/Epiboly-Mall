@@ -27,16 +27,16 @@ class MyTitle extends StatelessWidget {
     double? statusBarHeight =
         WidgetsBinding.instance!.window.padding.top / WidgetsBinding.instance!.window.devicePixelRatio;
     return Container(
-      color: bgColor ?? Colors.white,
+      color: bgColor ?? Colors.transparent,
       padding: EdgeInsets.only(top: statusBarHeight + 20, bottom: 12),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          GestureDetector(
-            onTap: () {
-              MyNavigator.pop();
-            },
-            child: Container(
+      child: GestureDetector(
+        onTap: () {
+          MyNavigator.pop();
+        },
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
               padding: EdgeInsets.only(left: 16),
               child: Image.asset(
                 theme == TitleTheme.white ? 'assets/images/common/back_white.png' : 'assets/images/common/back.png',
@@ -44,14 +44,14 @@ class MyTitle extends StatelessWidget {
                 height: 18,
               ),
             ),
-          ),
-          SizedBox(width: 12),
-          Text(title,
-              style: TextStyle(
-                fontSize: 17,
-                color: theme == TitleTheme.black ? Colors.black : Colors.white,
-              )),
-        ],
+            SizedBox(width: 12),
+            Text(title,
+                style: TextStyle(
+                  fontSize: 17,
+                  color: theme == TitleTheme.black ? Colors.black : Colors.white,
+                )),
+          ],
+        ),
       ),
     );
   }

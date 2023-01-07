@@ -29,4 +29,10 @@ class AppColors {
   // 分割线
   static const Color dividerColor = Color(0xFFEBEBEB);
 
+  static const Color blue = Color(0xFF4e8ef5);
+
+  static const Color gray = Color(0xFF969696);
+
+  static const Color red = Color(0xFFFD4841);
+
 }

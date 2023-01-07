@@ -20,6 +20,7 @@ class CardContainerVertical extends StatelessWidget with MixinContainer {
       this.isRequired = false,
       this.autoValidate = false,
       this.showLine = false,
+      this.contentIsRight = false,
       this.labelSuffix})
       : super(key: key);
 
@@ -91,4 +92,7 @@ class CardContainerVertical extends StatelessWidget with MixinContainer {
   bool? visible;
 
   double? space;
+
+  @override
+  bool contentIsRight;
 }
