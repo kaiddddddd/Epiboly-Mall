@@ -48,7 +48,7 @@ class _TheaterPageState extends BaseState {
                     child: Column(
                       children: [
                         MySearch(
-                          bgColor: Color(0xfff6f5f8),
+                          searchBgColor: Color(0xfff6f5f8),
                           hint: "请输入商品名称",
                           textColor: Colors.white,
                         ),

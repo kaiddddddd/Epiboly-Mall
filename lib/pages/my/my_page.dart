@@ -1,8 +1,10 @@
 import 'package:MallApp/styles/colors.dart';
+import 'package:MallApp/utils/my_navigator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/icon.dart';
+import 'my_order_page.dart';
 
 class MyPage extends StatelessWidget {
   var screenWidth;
@@ -184,10 +186,38 @@ class MyPage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              _buildMyOrderItem("assets/images/my/order1.png", "待付款", () => {}),
-              _buildMyOrderItem("assets/images/my/order2.png", "待发货", () => {}),
-              _buildMyOrderItem("assets/images/my/order3.png", "待收货", () => {}),
-              _buildMyOrderItem("assets/images/my/order4.png", "我的售后", () => {}),
+              _buildMyOrderItem(
+                  "assets/images/my/order1.png",
+                  "待付款",
+                  () => {
+                        MyNavigator.push(MyOrderPage(
+                          orderStatus: "1",
+                        ))
+                      }),
+              _buildMyOrderItem(
+                  "assets/images/my/order2.png",
+                  "待发货",
+                  () => {
+                        MyNavigator.push(MyOrderPage(
+                          orderStatus: "2",
+                        ))
+                      }),
+              _buildMyOrderItem(
+                  "assets/images/my/order3.png",
+                  "待收货",
+                  () => {
+                        MyNavigator.push(MyOrderPage(
+                          orderStatus: "3",
+                        ))
+                      }),
+              _buildMyOrderItem(
+                  "assets/images/my/order4.png",
+                  "我的售后",
+                  () => {
+                        MyNavigator.push(MyOrderPage(
+                          orderStatus: "4",
+                        ))
+                      }),
             ],
           )
         ],

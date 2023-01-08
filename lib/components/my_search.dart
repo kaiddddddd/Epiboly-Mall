@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 
 class MySearch extends StatelessWidget {
 
-  MySearch({this.bgColor, this.hint = "",this.textColor});
+  MySearch({this.searchBgColor, this.hint = "",this.textColor});
 
-  final Color? bgColor;
+  final Color? searchBgColor;
 
   final Color? textColor;
 
@@ -20,7 +20,7 @@ class MySearch extends StatelessWidget {
         Expanded(
           child: Container(
             decoration: BoxDecoration(
-              color: bgColor ?? Colors.white,
+              color: searchBgColor ?? Colors.white,
               borderRadius: BorderRadius.circular(20),
             ),
             alignment: Alignment.centerLeft,
