@@ -1,4 +1,5 @@
 import 'package:MallApp/pages/book/book_main.dart';
+import 'package:MallApp/pages/find/marke_center_page.dart';
 import 'package:MallApp/pages/find/theater_page.dart';
 import 'package:MallApp/utils/my_navigator.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,7 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 import '../../components/icon.dart';
 import '../../styles/colors.dart';
 import '../../utils/date_util.dart';
+import 'marke_advertise_page.dart';
 import 'news_page.dart';
 
 class FindPage extends StatelessWidget {
@@ -93,7 +95,7 @@ class FindPage extends StatelessWidget {
               children: [
                 _buildBottomMenuItem(3, "小说", "去阅读", () => {MyNavigator.push(BookMainPage())}),
                 SizedBox(width: 20),
-                _buildBottomMenuItem(4, "营销中心", "去查看", () => {}),
+                _buildBottomMenuItem(4, "营销中心", "去查看", () => {MyNavigator.push(MarkeCenterPage())}),
               ],
             ),
           ],
