@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/icon.dart';
+import 'invite_friends.dart';
 import 'my_order_page.dart';
 
 class MyPage extends StatelessWidget {
@@ -337,7 +338,7 @@ class MyPage extends StatelessWidget {
               _buildMyFunctionItem("assets/images/my/gn3.png", "购物值", () => {}),
               _buildMyFunctionItem("assets/images/my/gn4.png", "商品收藏", () => {}),
               _buildMyFunctionItem("assets/images/my/gn5.png", "收货地址", () => {}),
-              _buildMyFunctionItem("assets/images/my/gn6.png", "邀请好友", () => {}),
+              _buildMyFunctionItem("assets/images/my/gn6.png", "邀请好友", () => {MyNavigator.push(InviteFriends())}),
               _buildMyFunctionItem("assets/images/my/gn7.png", "退出登录", () => {}),
             ],
           )

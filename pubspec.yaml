@@ -88,6 +88,7 @@ flutter:
     - assets/images/common/
     - assets/images/activity/
     - assets/images/book/
+    - assets/images/pay/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

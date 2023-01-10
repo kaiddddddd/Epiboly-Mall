@@ -4,6 +4,7 @@ import 'package:MallApp/components/title_bar.dart';
 import 'package:MallApp/styles/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:underline_indicator/underline_indicator.dart';
 
 import '../../utils/Toast.dart';
@@ -245,7 +246,9 @@ class _MyOrderPageState extends BaseState<MyOrderPage> with SingleTickerProvider
             ),
             SizedBox(width: 8),
             OutlinedButton(
-              onPressed: () {},
+              onPressed: () {
+                pay();
+              },
               child: Text("立即支付", style: TextStyle(color: AppColors.priceColor)),
               style: _getButtonStyle(AppColors.priceColor),
             ),
@@ -362,5 +365,41 @@ class _MyOrderPageState extends BaseState<MyOrderPage> with SingleTickerProvider
             ),
           )
         : Container();
+  }
+
+  void pay() {
+    SmartDialog.show(
+        builder: (context) {
+          return Container(
+            padding: EdgeInsets.all(22),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(22),
+            ),
+            margin: EdgeInsets.symmetric(horizontal: 16),
+            width: double.infinity,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Image.asset("assets/images/pay/pay_success.png", width: 180, height: 100),
+                SizedBox(height: 10),
+                Text("支付成功", style: TextStyle(color: AppColors.black, fontSize: 16)),
+                SizedBox(height: 30),
+                TextButton(
+                    onPressed: () {
+                      SmartDialog.dismiss();
+                    },
+                    child: Text("确定", style: TextStyle(color: Colors.white, fontSize: 16)),
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(AppColors.primaryColor),
+                      foregroundColor: MaterialStateProperty.all(Colors.white),
+                      shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(50))),
+                      padding: MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 80, vertical: 10)),
+                    )),
+              ],
+            ),
+          );
+        },
+        alignment: Alignment.center);
   }
 }

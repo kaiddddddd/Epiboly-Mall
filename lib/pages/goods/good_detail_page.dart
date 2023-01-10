@@ -20,9 +20,6 @@ class _GoodDetailPageState extends State<GoodDetailPage> {
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
-      _showPayMethodDialog();
-    });
     return Container(
       color: AppColors.primaryBackground,
       child: Material(
